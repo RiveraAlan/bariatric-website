@@ -1,10 +1,29 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { ArrowRight } from 'lucide-vue-next'
 import heroVideo from '../assets/Facebook Video Download.mp4'
+import type { StateData } from '../data/states'
+
+const props = defineProps<{
+  stateData?: StateData,
+}>()
 
 const { t } = useI18n()
+
+const heroTitle = computed(() => {
+  if (props.stateData) {
+    return `Transform Your Life with Bariatric Surgery in ${props.stateData.name}`
+  }
+  return t('hero.title')
+})
+
+const heroSubtitle = computed(() => {
+  if (props.stateData) {
+    return `Serving ${props.stateData.majorCities.join(', ')} and surrounding areas. Expert weight loss surgery with world-class care in Mexico.`
+  }
+  return t('hero.subtitle')
+})
 
 const years = ref(0)
 const surgeries = ref(0)
@@ -58,10 +77,10 @@ onMounted(() => {
         <div class="space-y-8 text-white">
           <div class="space-y-4">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              {{ t('hero.title') }}
+              {{ heroTitle }}
             </h1>
             <p class="text-lg md:text-xl text-primary-50">
-              {{ t('hero.subtitle') }}
+              {{ heroSubtitle }}
             </p>
           </div>
 
