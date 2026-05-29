@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Route, Routes, useLocation } from 'react-router-dom'
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import Home from './pages/Home'
 import HomeEn from './pages/HomeEn'
@@ -9,13 +9,15 @@ import StatePage from './pages/StatePage.tsx'
 import BlogList from './pages/BlogList'
 import BlogPost from './pages/BlogPost'
 import BypassGastrico from './pages/BypassGastrico'
+import MiniBypass from './pages/MiniBypass'
+import BiparticionIntestinal from './pages/BiparticionIntestinal'
 import Contacto from './pages/Contacto'
 import Contact from './pages/Contact'
 import Cirugias from './pages/Cirugias'
 import Surgeries from './pages/Surgeries'
 import PreguntasFrecuentes from './pages/PreguntasFrecuentes'
 import Faq from './pages/Faq'
-import BandaGastrica from './pages/BandaGastrica'
+import MangaGastrica from './pages/MangaGastrica'
 import Obesidad from './pages/Obesidad'
 import Obesity from './pages/Obesity'
 import Nosotros from './pages/Nosotros'
@@ -48,7 +50,9 @@ function App() {
       pathname === '/' ||
       isSegment('/es') ||
       isSegment('/bypass-gastrico') ||
-      isSegment('/banda-gastrica') ||
+      isSegment('/manga-gastrica') ||
+      isSegment('/mini-bypass') ||
+      isSegment('/biparticion-intestinal') ||
       isSegment('/nosotros') ||
       isSegment('/testimonios') ||
       isSegment('/contacto') ||
@@ -78,7 +82,10 @@ function App() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/cirugias" element={<Cirugias />} />
       <Route path="/surgeries" element={<Surgeries />} />
-      <Route path="/banda-gastrica" element={<BandaGastrica />} />
+      <Route path="/manga-gastrica" element={<MangaGastrica />} />
+      <Route path="/mini-bypass" element={<MiniBypass />} />
+      <Route path="/biparticion-intestinal" element={<BiparticionIntestinal />} />
+      <Route path="/banda-gastrica" element={<Navigate to="/manga-gastrica" replace />} />
       <Route path="/obesidad" element={<Obesidad />} />
       <Route path="/obesity" element={<Obesity />} />
       <Route path="/nosotros" element={<Nosotros />} />

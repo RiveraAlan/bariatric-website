@@ -5,10 +5,10 @@ import ContactSection from '../components/ContactSection'
 import FooterSection from '../components/FooterSection'
 import BlogHero from '../components/BlogHero'
 import sleeveImage from '../assets/Facebook Image (2).jpg'
-import recoveryImage from '../assets/Facebook Image (5).jpg'
+import recoveryImage from '../assets/Facebook Image (3).jpg'
 import surgeryVideoUrl from '../assets/Facebook Video Download.mp4'
 
-export default function BandaGastrica() {
+export default function MangaGastrica() {
   return (
     <div>
       <Helmet>
@@ -17,7 +17,7 @@ export default function BandaGastrica() {
           name="description"
           content="Conoce la cirugía de manga gástrica: descripción, resultados, riesgos, exámenes preoperatorios y dieta post-operatoria."
         />
-        <link rel="canonical" href="https://www.obesityfernandoaceves.com/banda-gastrica" />
+        <link rel="canonical" href="https://www.obesityfernandoaceves.com/manga-gastrica" />
       </Helmet>
 
       <NavigationHeader />

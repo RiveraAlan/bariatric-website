@@ -68,7 +68,7 @@ export default function AboutSection() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            animateValue(98.5, 2000, (val) => setSuccessRate(val))
+            animateValue(98, 2000, (val) => setSuccessRate(val))
             observer.disconnect()
           }
         })

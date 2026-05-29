@@ -6,6 +6,8 @@ import BlogHero from '../components/BlogHero'
 import ContactSection from '../components/ContactSection'
 import bypassImage from '../assets/Facebook Image (1).jpg'
 import sleeveImage from '../assets/Facebook Image (2).jpg'
+import miniBypassImage from '../assets/Facebook Image (4).jpg'
+import bipartitionImage from '../assets/Facebook Image.jpg'
 
 export default function Surgeries() {
   return (
@@ -92,7 +94,7 @@ export default function Surgeries() {
 
           <div className="grid md:grid-cols-2 gap-8">
             <a
-              href="/banda-gastrica"
+              href="/manga-gastrica"
               className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
               <div className="relative h-64">
@@ -120,6 +122,42 @@ export default function Surgeries() {
               </div>
               <div className="p-6 space-y-4">
                 <div className="text-gray-600">Description, results, risks, and post-op guidance.</div>
+                <div className="inline-flex items-center text-primary-700 font-semibold">
+                  View details
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="/mini-bypass"
+              className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div className="relative h-64">
+                <img src={miniBypassImage} alt="Mini Gastric Bypass" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <h3 className="absolute bottom-4 left-6 text-2xl font-bold text-white">Mini Gastric Bypass</h3>
+              </div>
+              <div className="p-6 space-y-4">
+                <div className="text-gray-600">One-anastomosis bypass: significant weight loss with a shorter operating time.</div>
+                <div className="inline-flex items-center text-primary-700 font-semibold">
+                  View details
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="/biparticion-intestinal"
+              className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div className="relative h-64">
+                <img src={bipartitionImage} alt="Intestinal Bipartition" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <h3 className="absolute bottom-4 left-6 text-2xl font-bold text-white">Intestinal Bipartition (Santoro)</h3>
+              </div>
+              <div className="p-6 space-y-4">
+                <div className="text-gray-600">Santoro technique: a sleeve combined with an intestinal derivation for stronger metabolic control.</div>
                 <div className="inline-flex items-center text-primary-700 font-semibold">
                   View details
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />

@@ -19,15 +19,17 @@ const messages = {
       scheduleConsult: 'Schedule Consultation',
       learnMore: 'Learn More',
       yearsExperience: 'Years of Experience',
-      successfulSurgeries: 'Successful Surgeries',
+      successfulSurgeries: 'Surgeries Performed',
+      bariatricSurgeries: 'Bariatric Surgeries',
       satisfaction: 'Satisfaction',
+      successRate: 'Success Rate',
     },
     about: {
       title: 'Bariatric Surgery Clinic',
       description: 'We are a specialized clinic integrated by professionals with extensive experience in the management of obese patients. Our comprehensive approach combines cutting-edge technology with humane and personalized care.',
       successRate: 'Success rate in our procedures',
       provenExperience: 'Proven Experience',
-      provenExperienceDesc: 'More than 15 years performing bariatric surgeries with exceptional results',
+      provenExperienceDesc: 'More than 36 years of surgical experience with exceptional results',
       comprehensiveApproach: 'Comprehensive Approach',
       comprehensiveApproachDesc: 'Complete evaluation and continuous follow-up to ensure your success',
       personalizedCare: 'Personalized Care',
@@ -65,6 +67,11 @@ const messages = {
       gastricSleeveDesc: 'Laparoscopic procedure that reduces the size of the stomach by 80%, limiting the amount of food that can be consumed.',
       gastricBypass: 'Gastric Bypass',
       gastricBypassDesc: 'Technique that combines stomach restriction with an intestinal bypass to limit nutrient absorption.',
+      miniBypass: 'Mini Gastric Bypass (One Anastomosis)',
+      miniBypassDesc: 'A simplified bypass with a single connection. It delivers significant weight loss and metabolic improvement with a shorter operating time.',
+      intestinalBipartition: 'Intestinal Bipartition (Santoro)',
+      intestinalBipartitionDesc: 'Combines a gastric sleeve with an intestinal derivation to enhance metabolic control while preserving normal digestive transit.',
+      viewDetails: 'View details',
       effectiveWeightLoss: 'Effective weight loss',
       metabolicImprovement: 'Improvement of metabolic diseases',
       quickRecovery: 'Quick recovery',
@@ -79,7 +86,7 @@ const messages = {
       advancedTechnology: 'Advanced Technology',
       advancedTechnologyDesc: 'State-of-the-art equipment for safe procedures',
       provenExperience: 'Proven Experience',
-      provenExperienceDesc: 'More than 15 years performing successful bariatric surgeries',
+      provenExperienceDesc: 'More than 36 years and 15,000+ successful surgeries',
     },
     team: {
       title: 'Our Team of Specialists',
@@ -198,15 +205,17 @@ const messages = {
       scheduleConsult: 'Agendar Consulta',
       learnMore: 'Conocer Más',
       yearsExperience: 'Años de Experiencia',
-      successfulSurgeries: 'Cirugías Exitosas',
+      successfulSurgeries: 'Cirugías Realizadas',
+      bariatricSurgeries: 'Cirugías Bariátricas',
       satisfaction: 'Satisfacción',
+      successRate: 'Tasa de Éxito',
     },
     about: {
       title: 'Clínica de Cirugía Bariátrica',
       description: 'Somos una clínica especializada integrada por profesionales con amplia experiencia en el manejo del paciente obeso. Nuestro enfoque integral combina tecnología de vanguardia con un trato humano y personalizado.',
       successRate: 'Tasa de éxito en nuestros procedimientos',
       provenExperience: 'Experiencia Comprobada',
-      provenExperienceDesc: 'Más de 15 años realizando cirugías bariátricas con resultados excepcionales',
+      provenExperienceDesc: 'Más de 36 años de experiencia quirúrgica con resultados excepcionales',
       comprehensiveApproach: 'Enfoque Integral',
       comprehensiveApproachDesc: 'Evaluación completa y seguimiento continuo para garantizar tu éxito',
       personalizedCare: 'Atención Personalizada',
@@ -244,6 +253,11 @@ const messages = {
       gastricSleeveDesc: 'Procedimiento laparoscópico que reduce el tamaño del estómago en un 80%, limitando la cantidad de alimentos que puede consumir.',
       gastricBypass: 'Bypass Gástrico',
       gastricBypassDesc: 'Técnica que combina la restricción del estómago con una derivación intestinal para limitar la absorción de nutrientes.',
+      miniBypass: 'Mini Bypass Gástrico (Una Anastomosis)',
+      miniBypassDesc: 'Un bypass simplificado con una sola conexión. Ofrece una pérdida de peso significativa y mejora metabólica con menor tiempo quirúrgico.',
+      intestinalBipartition: 'Bipartición Intestinal (Santoro)',
+      intestinalBipartitionDesc: 'Combina la manga gástrica con una derivación intestinal para potenciar el control metabólico conservando el tránsito digestivo normal.',
+      viewDetails: 'Ver detalles',
       effectiveWeightLoss: 'Pérdida de peso efectiva',
       metabolicImprovement: 'Mejora de enfermedades metabólicas',
       quickRecovery: 'Recuperación rápida',
@@ -258,7 +272,7 @@ const messages = {
       advancedTechnology: 'Tecnología Avanzada',
       advancedTechnologyDesc: 'Equipamiento de última generación para procedimientos seguros',
       provenExperience: 'Experiencia Comprobada',
-      provenExperienceDesc: 'Más de 15 años realizando cirugías bariátricas exitosas',
+      provenExperienceDesc: 'Más de 36 años y más de 15,000 cirugías exitosas',
     },
     team: {
       title: 'Nuestro Equipo de Especialistas',
@@ -381,7 +395,9 @@ const initialLanguage = (() => {
     pathname === '/' ||
     isSegment('/es') ||
     isSegment('/bypass-gastrico') ||
-    isSegment('/banda-gastrica') ||
+    isSegment('/manga-gastrica') ||
+    isSegment('/mini-bypass') ||
+    isSegment('/biparticion-intestinal') ||
     isSegment('/nosotros') ||
     isSegment('/testimonios') ||
     isSegment('/contacto') ||

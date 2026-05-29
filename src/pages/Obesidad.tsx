@@ -144,7 +144,7 @@ export default function Obesidad() {
             </div>
             <div className="grid sm:grid-cols-2 gap-4">
               <a
-                href="/banda-gastrica"
+                href="/manga-gastrica"
                 className="group rounded-xl border border-gray-200 p-6 hover:border-primary-400 hover:shadow-md transition-all duration-200"
               >
                 <div className="font-bold text-gray-900 group-hover:text-primary-700 transition-colors">

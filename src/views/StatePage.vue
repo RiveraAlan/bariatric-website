@@ -6,7 +6,6 @@ import { getStateBySlug } from '../data/states'
 import NavigationHeader from '../components/NavigationHeader.vue'
 import MedicalTourismHero from '../components/MedicalTourismHero.vue'
 import WhyMedicalTourismSection from '../components/WhyMedicalTourismSection.vue'
-import CostComparisonSection from '../components/CostComparisonSection.vue'
 import TravelLogisticsSection from '../components/TravelLogisticsSection.vue'
 import StateTestimonialsSection from '../components/StateTestimonialsSection.vue'
 import ServicesSection from '../components/ServicesSection.vue'
@@ -56,7 +55,6 @@ useHead(computed(() => ({
     <NavigationHeader />
     <MedicalTourismHero :state-data="stateData" />
     <WhyMedicalTourismSection />
-    <CostComparisonSection :state-data="stateData" />
     <ServicesSection />
     <TravelLogisticsSection :state-data="stateData" />
     <StateTestimonialsSection :state-data="stateData" />

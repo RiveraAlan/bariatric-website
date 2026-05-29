@@ -1,11 +1,16 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Heart, Activity, Shield, CheckCircle } from 'lucide-react'
+import { Heart, Activity, Shield, CheckCircle, ArrowRight } from 'lucide-react'
+import sleeveImage from '../assets/Facebook Image (2).jpg'
+import bypassImage from '../assets/Facebook Image (1).jpg'
+import miniBypassImage from '../assets/Facebook Image (4).jpg'
+import bipartitionImage from '../assets/Facebook Image.jpg'
 
 type Service = {
   title: string,
   description: string,
   image: string,
+  href: string,
   benefits: string[],
 }
 
@@ -16,7 +21,8 @@ export default function ServicesSection() {
     {
       title: t('services.gastricSleeve'),
       description: t('services.gastricSleeveDesc'),
-      image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&h=400&fit=crop',
+      image: sleeveImage,
+      href: '/manga-gastrica',
       benefits: [
         t('services.effectiveWeightLoss'),
         t('services.metabolicImprovement'),
@@ -27,11 +33,36 @@ export default function ServicesSection() {
     {
       title: t('services.gastricBypass'),
       description: t('services.gastricBypassDesc'),
-      image: 'https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=600&h=400&fit=crop',
+      image: bypassImage,
+      href: '/bypass-gastrico',
       benefits: [
         t('services.longTermResults'),
         t('services.diabetesControl'),
         t('services.comorbiditiesReduction'),
+        t('services.qualityOfLifeImprovement'),
+      ],
+    },
+    {
+      title: t('services.miniBypass'),
+      description: t('services.miniBypassDesc'),
+      image: miniBypassImage,
+      href: '/mini-bypass',
+      benefits: [
+        t('services.effectiveWeightLoss'),
+        t('services.diabetesControl'),
+        t('services.metabolicImprovement'),
+        t('services.quickRecovery'),
+      ],
+    },
+    {
+      title: t('services.intestinalBipartition'),
+      description: t('services.intestinalBipartitionDesc'),
+      image: bipartitionImage,
+      href: '/biparticion-intestinal',
+      benefits: [
+        t('services.longTermResults'),
+        t('services.diabetesControl'),
+        t('services.metabolicImprovement'),
         t('services.qualityOfLifeImprovement'),
       ],
     },
@@ -51,9 +82,10 @@ export default function ServicesSection() {
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {services.map((service, index) => (
-            <div
+            <a
               key={index}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              href={service.href}
+              className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
               <div className="relative h-64">
                 <img
@@ -76,8 +108,12 @@ export default function ServicesSection() {
                     </div>
                   ))}
                 </div>
+                <div className="mt-6 inline-flex items-center text-primary-700 font-semibold">
+                  {t('services.viewDetails')}
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 

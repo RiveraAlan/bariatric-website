@@ -91,7 +91,8 @@ const handleSubmit = () => {
           <!-- Map Placeholder -->
           <div class="rounded-2xl overflow-hidden shadow-lg h-[300px] bg-gray-200">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.5!2d-103.4!3d20.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDQyJzAwLjAiTiAxMDPCsDI0JzAwLjAiVw!5e0!3m2!1sen!2smx!4v1234567890"
+              title="Hospital Puerta de Hierro Andares, Zapopan"
+              src="https://maps.google.com/maps?q=Hospital%20Puerta%20de%20Hierro%20Andares%2C%20Av.%20Empresarios%20150%2C%20Puerta%20de%20Hierro%2C%2045116%20Zapopan%2C%20Jal&z=16&output=embed"
               width="100%"
               height="100%"
               style="border:0;"

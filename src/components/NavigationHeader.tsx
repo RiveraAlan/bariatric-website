@@ -34,7 +34,7 @@ export default function NavigationHeader() {
     if (isSegment('/cirugias')) return '/surgeries'
     if (isSegment('/obesidad')) return '/obesity'
     if (isSegment('/preguntas-frecuentes') || isSegment('/preguntas-frequentes')) return '/faq'
-    if (isSegment('/bypass-gastrico') || isSegment('/banda-gastrica')) return '/surgeries'
+    if (isSegment('/bypass-gastrico') || isSegment('/manga-gastrica') || isSegment('/mini-bypass') || isSegment('/biparticion-intestinal')) return '/surgeries'
     if (isSegment('/blog')) return pathname
 
     return '/en'

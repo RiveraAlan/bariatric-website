@@ -6,6 +6,8 @@ import BlogHero from '../components/BlogHero'
 import ContactSection from '../components/ContactSection'
 import bypassImage from '../assets/Facebook Image (1).jpg'
 import sleeveImage from '../assets/Facebook Image (2).jpg'
+import miniBypassImage from '../assets/Facebook Image (4).jpg'
+import bipartitionImage from '../assets/Facebook Image.jpg'
 
 export default function Cirugias() {
   return (
@@ -96,7 +98,7 @@ export default function Cirugias() {
 
           <div className="grid md:grid-cols-2 gap-8">
             <a
-              href="/banda-gastrica"
+              href="/manga-gastrica"
               className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
               <div className="relative h-64">
@@ -139,6 +141,58 @@ export default function Cirugias() {
               <div className="p-6 space-y-4">
                 <div className="text-gray-600">
                   Descripción, resultados, riesgos y cuidados post-operatorios del bypass gástrico.
+                </div>
+                <div className="inline-flex items-center text-primary-700 font-semibold">
+                  Ver detalles
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="/mini-bypass"
+              className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div className="relative h-64">
+                <img
+                  src={miniBypassImage}
+                  alt="Mini Bypass Gástrico"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <h3 className="absolute bottom-4 left-6 text-2xl font-bold text-white">
+                  Mini Bypass Gástrico
+                </h3>
+              </div>
+              <div className="p-6 space-y-4">
+                <div className="text-gray-600">
+                  Bypass de una anastomosis: pérdida de peso significativa con menor tiempo quirúrgico.
+                </div>
+                <div className="inline-flex items-center text-primary-700 font-semibold">
+                  Ver detalles
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="/biparticion-intestinal"
+              className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div className="relative h-64">
+                <img
+                  src={bipartitionImage}
+                  alt="Bipartición Intestinal"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <h3 className="absolute bottom-4 left-6 text-2xl font-bold text-white">
+                  Bipartición Intestinal (Santoro)
+                </h3>
+              </div>
+              <div className="p-6 space-y-4">
+                <div className="text-gray-600">
+                  Técnica de Santoro: manga gástrica con derivación intestinal para mayor control metabólico.
                 </div>
                 <div className="inline-flex items-center text-primary-700 font-semibold">
                   Ver detalles

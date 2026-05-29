@@ -5,7 +5,6 @@ import { getStateBySlug } from '../data/states'
 import NavigationHeader from '../components/NavigationHeader.tsx'
 import MedicalTourismHero from '../components/MedicalTourismHero.tsx'
 import WhyMedicalTourismSection from '../components/WhyMedicalTourismSection.tsx'
-import CostComparisonSection from '../components/CostComparisonSection.tsx'
 import TravelLogisticsSection from '../components/TravelLogisticsSection.tsx'
 import StateTestimonialsSection from '../components/StateTestimonialsSection.tsx'
 import ServicesSection from '../components/ServicesSection.tsx'
@@ -45,7 +44,6 @@ export default function StatePage({ stateSlug }: StatePageProps) {
       <NavigationHeader />
       <MedicalTourismHero stateData={stateData} />
       <WhyMedicalTourismSection />
-      <CostComparisonSection stateData={stateData} />
       <ServicesSection />
       <TravelLogisticsSection stateData={stateData} />
       <StateTestimonialsSection stateData={stateData} />

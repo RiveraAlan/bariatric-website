@@ -28,7 +28,7 @@ export default function FooterSection() {
   ]
 
   const services = [
-    { name: 'services.gastricSleeve', href: isEnglish ? '/surgeries' : '/banda-gastrica' },
+    { name: 'services.gastricSleeve', href: isEnglish ? '/surgeries' : '/manga-gastrica' },
     { name: 'services.gastricBypass', href: isEnglish ? '/surgeries' : '/bypass-gastrico' },
     { name: 'footer.nutritionalConsultation', href: contactHref },
     { name: 'footer.postOperativeFollowUp', href: contactHref },
