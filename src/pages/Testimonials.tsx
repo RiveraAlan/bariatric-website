@@ -34,6 +34,7 @@ export default function Testimonials() {
         beforeLabel="Before"
         afterLabel="After"
         ageLabel="years"
+        lang="en"
       />
 
       <ContactSection

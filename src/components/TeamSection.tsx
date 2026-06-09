@@ -3,6 +3,12 @@ import { useTranslation } from 'react-i18next'
 import { Award, ChevronLeft, ChevronRight } from 'lucide-react'
 import { teamMembers } from '../data/team'
 
+function getInitials(name: string): string {
+  const cleaned = name.replace(/\b(Dr|Dra|Lic|CSP|Mtro|Mtra)\.?\s*/gi, '').trim()
+  const parts = cleaned.split(/\s+/).filter(Boolean)
+  return parts.slice(0, 2).map((p) => p.charAt(0).toUpperCase()).join('') || name.charAt(0).toUpperCase()
+}
+
 export default function TeamSection() {
   const { t, i18n } = useTranslation()
   const lang = (i18n.resolvedLanguage || i18n.language || 'es').startsWith('en') ? 'en' : 'es'
@@ -95,24 +101,41 @@ export default function TeamSection() {
             <article
               key={member.name}
               data-team-card
-              className="snap-start shrink-0 w-[280px] sm:w-[300px] bg-white rounded-2xl border-2 border-gray-100 shadow-sm hover:shadow-lg transition-shadow duration-300 p-6 flex flex-col"
+              className="snap-start shrink-0 w-[280px] sm:w-[300px] bg-white rounded-2xl border-2 border-gray-100 shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col"
             >
-              <span className="self-start bg-primary-100 text-primary-700 text-xs font-bold px-3 py-1 rounded-full mb-4">
-                {member.years}+ {t('team.yearsExperience')}
-              </span>
-
-              <h3 className="text-lg font-bold text-gray-900 leading-snug">{member.name}</h3>
-              <p className="text-primary-600 text-sm font-medium mt-1 mb-5">
-                {member.specialty[lang]}
-              </p>
-
-              <div className="space-y-2">
-                {member.credentials[lang].map((credential, idx) => (
-                  <div key={idx} className="flex items-start space-x-2 text-sm text-gray-600">
-                    <Award className="w-4 h-4 text-primary-600 flex-shrink-0 mt-0.5" />
-                    <span>{credential}</span>
+              <div className="relative h-64 bg-gradient-to-br from-primary-500 to-primary-700">
+                {member.image ? (
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="absolute inset-0 w-full h-full object-cover object-top"
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-5xl font-bold text-white/90 tracking-wide">
+                      {getInitials(member.name)}
+                    </span>
                   </div>
-                ))}
+                )}
+                <span className="absolute bottom-3 right-3 bg-white/90 backdrop-blur text-primary-700 text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                  {member.years}+ {t('team.yearsExperience')}
+                </span>
+              </div>
+
+              <div className="p-6 flex flex-col flex-1">
+                <h3 className="text-lg font-bold text-gray-900 leading-snug">{member.name}</h3>
+                <p className="text-primary-600 text-sm font-medium mt-1 mb-5">
+                  {member.specialty[lang]}
+                </p>
+
+                <div className="space-y-2">
+                  {member.credentials[lang].map((credential, idx) => (
+                    <div key={idx} className="flex items-start space-x-2 text-sm text-gray-600">
+                      <Award className="w-4 h-4 text-primary-600 flex-shrink-0 mt-0.5" />
+                      <span>{credential}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </article>
           ))}

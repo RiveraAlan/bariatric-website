@@ -1,3 +1,14 @@
+import fernandoAceves from '../assets/team/fernando-aceves.jpeg'
+import joseDeJesusAceves from '../assets/team/jose-de-jesus-aceves.jpg'
+import carmenAceves from '../assets/team/carmen-aceves.jpg'
+import armandoDiaz from '../assets/team/armando-diaz.jpeg'
+import luisHiguera from '../assets/team/luis-higuera.jpg'
+import karlaMadrigal from '../assets/team/karla-madrigal.jpeg'
+import montserratGonzalez from '../assets/team/montserrat-gonzalez.jpeg'
+import victoriaBeltran from '../assets/team/victoria-beltran.jpeg'
+import ericaTorres from '../assets/team/erica-torres.jpeg'
+import hectorFonseca from '../assets/team/hector-fonseca.jpeg'
+
 export type Localized = {
   es: string,
   en: string,
@@ -7,6 +18,9 @@ export type TeamMember = {
   name: string,
   years: number,
   specialty: Localized,
+  // Imported image URL for the member's photo. Optional until the real
+  // photos are wired in; falls back to an initials monogram when absent.
+  image?: string,
   credentials: {
     es: string[],
     en: string[],
@@ -19,6 +33,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: 'Dr. Fernando Aceves Miramontes',
     years: 36,
+    image: fernandoAceves,
     specialty: {
       es: 'Cirugía General, Laparoscopia y Bariátrica',
       en: 'General, Laparoscopic & Bariatric Surgery',
@@ -55,6 +70,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: 'Dr. José De Jesús Aceves Aceves',
     years: 3,
+    image: joseDeJesusAceves,
     specialty: {
       es: 'Cirugía General y Laparoscopia',
       en: 'General & Laparoscopic Surgery',
@@ -73,6 +89,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: 'Dra. María Del Carmen Aceves Miramontes',
     years: 40,
+    image: carmenAceves,
     specialty: {
       es: 'Cardiología',
       en: 'Cardiology',
@@ -85,6 +102,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: 'Dr. Armando Díaz Rodríguez',
     years: 36,
+    image: armandoDiaz,
     specialty: {
       es: 'Anestesiología y Medicina del Enfermo en Estado Crítico',
       en: 'Anesthesiology & Critical Care Medicine',
@@ -103,6 +121,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: 'Dr. Luis Enrique Higuera Medina',
     years: 19,
+    image: luisHiguera,
     specialty: {
       es: 'Anestesiología y Anestesiología Cardiovascular',
       en: 'Anesthesiology & Cardiovascular Anesthesiology',
@@ -121,6 +140,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: 'Dra. Karla Margarita Madrigal Rentería',
     years: 20,
+    image: karlaMadrigal,
     specialty: {
       es: 'Anestesiología y Algología (Medicina del Dolor)',
       en: 'Anesthesiology & Algology (Pain Medicine)',
@@ -157,6 +177,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: 'Dra. Montserrat González Gómez',
     years: 17,
+    image: montserratGonzalez,
     specialty: {
       es: 'Nutrición Clínica',
       en: 'Clinical Nutrition',
@@ -177,6 +198,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: 'Lic. Victoria Citlali Beltrán Preciado',
     years: 6,
+    image: victoriaBeltran,
     specialty: {
       es: 'Nutrición Clínica',
       en: 'Clinical Nutrition',
@@ -197,6 +219,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: 'Lic. Erica Torres García',
     years: 23,
+    image: ericaTorres,
     specialty: {
       es: 'Enfermería Quirúrgica — Laparoscopia de Alta Complejidad',
       en: 'Surgical Nursing — High-Complexity Laparoscopy',
@@ -215,6 +238,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: 'Dr. Héctor Martín Fonseca López',
     years: 33,
+    image: hectorFonseca,
     specialty: {
       es: 'Gastroenterología',
       en: 'Gastroenterology',

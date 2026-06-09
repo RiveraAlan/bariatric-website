@@ -1,0 +1,12 @@
+node_modules
+dist
+.git
+.gitignore
+.vscode
+.windsurf
+bariatric-react
+*.log
+.DS_Store
+Dockerfile
+.dockerignore
+README.md

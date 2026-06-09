@@ -12,7 +12,7 @@ export default function HeroSection({ stateData }: HeroSectionProps) {
 
   const heroVideos = useMemo(() => {
     const videos = Object.values(
-      import.meta.glob('../assets/quirofano/*.MP4', {
+      import.meta.glob('../assets/quirofano/*.mp4', {
         eager: true,
         as: 'url',
       }),

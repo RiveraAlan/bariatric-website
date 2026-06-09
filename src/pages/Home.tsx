@@ -36,6 +36,7 @@ export default function Home({ locale = 'es' }: HomeProps) {
         beforeLabel={isEnglish ? 'Before' : 'Antes'}
         afterLabel={isEnglish ? 'After' : 'Después'}
         ageLabel={isEnglish ? 'years' : 'años'}
+        lang={isEnglish ? 'en' : 'es'}
       />
       <FAQSection />
       <ContactSection

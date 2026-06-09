@@ -1,0 +1,16 @@
+# Fly.io config — static site (nginx serving the Vite build)
+app = "obesity-fernando-aceves"
+primary_region = "dfw"  # Dallas — central US, good for US + México traffic (qro is deprecated)
+
+[build]
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "256mb"
