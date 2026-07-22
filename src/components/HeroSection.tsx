@@ -149,7 +149,7 @@ export default function HeroSection({ stateData }: HeroSectionProps) {
     <section id="home" className="relative overflow-hidden">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -right-[18.5%] top-1/2 h-[80%] w-[60%] -translate-y-1/2">
+          <div className="absolute inset-0 h-full w-full lg:inset-auto lg:-right-[18.5%] lg:top-1/2 lg:h-[80%] lg:w-[60%] lg:-translate-y-1/2">
             <video
               ref={videoRef0}
               autoPlay
@@ -158,7 +158,7 @@ export default function HeroSection({ stateData }: HeroSectionProps) {
               playsInline
               src={heroVideos[slotVideoIndices[0]]}
               className={
-                `absolute inset-0 h-full w-full object-cover -rotate-90 origin-center transition-opacity duration-700 ` +
+                `absolute left-1/2 top-1/2 h-[120vh] w-[120vh] max-w-none -translate-x-1/2 -translate-y-1/2 -rotate-90 origin-center object-cover transition-opacity duration-700 lg:left-0 lg:top-0 lg:h-full lg:w-full lg:max-w-full lg:translate-x-0 lg:translate-y-0 ` +
                 (activeSlot === 0 ? (isCrossfading ? 'opacity-0' : 'opacity-100') : (isCrossfading ? 'opacity-100' : 'opacity-0'))
               }
             />
@@ -170,7 +170,7 @@ export default function HeroSection({ stateData }: HeroSectionProps) {
               playsInline
               src={heroVideos[slotVideoIndices[1]]}
               className={
-                `absolute inset-0 h-full w-full object-cover -rotate-90 origin-center transition-opacity duration-700 ` +
+                `absolute left-1/2 top-1/2 h-[120vh] w-[120vh] max-w-none -translate-x-1/2 -translate-y-1/2 -rotate-90 origin-center object-cover transition-opacity duration-700 lg:left-0 lg:top-0 lg:h-full lg:w-full lg:max-w-full lg:translate-x-0 lg:translate-y-0 ` +
                 (activeSlot === 1 ? (isCrossfading ? 'opacity-0' : 'opacity-100') : (isCrossfading ? 'opacity-100' : 'opacity-0'))
               }
             />
@@ -178,7 +178,8 @@ export default function HeroSection({ stateData }: HeroSectionProps) {
         </div>
       </div>
 
-      <div className="absolute inset-0 z-10 bg-gradient-to-r from-primary-700 from-0% via-primary-700 via-70% to-transparent to-88%"></div>
+      <div className="absolute inset-0 z-10 bg-gradient-to-t from-primary-700 from-30% via-primary-700/85 via-70% to-primary-700/40 lg:hidden"></div>
+      <div className="absolute inset-0 z-10 hidden lg:block bg-gradient-to-r from-primary-700 from-[44%] via-primary-700 via-[75%] to-transparent to-100%"></div>
 
       <div className="relative z-20 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
         <div className="grid lg:grid-cols-3 gap-12 items-center">
